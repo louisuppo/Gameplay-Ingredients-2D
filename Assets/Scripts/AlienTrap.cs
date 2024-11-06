@@ -15,11 +15,17 @@ public class AlienTrap : MonoBehaviour
             animButton.SetTrigger("Push");
             animLight.SetTrigger("Bug");
             Invoke("AlienATK", 1f);
+            Invoke("AlienThief", 3.5f);
         }
     }
 
     private void AlienATK()
     {
         animAlien.SetTrigger("Alien");
+    }
+
+        private void AlienThief()
+    {
+        PlayerInventory.Instance.RemoveItemFromInventory("GREENKEY");
     }
 }
