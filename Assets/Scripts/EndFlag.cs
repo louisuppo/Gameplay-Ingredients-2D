@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndFlag : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.CompareTag("Player") && (PlayerInventory.Instance.IsInInventory("REDGEM")))
+        {
+            PlayerInventory.Instance.RemoveItemFromInventory("REDGEM");
+        }
     }
 }
