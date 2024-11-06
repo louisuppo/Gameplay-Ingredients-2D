@@ -10,6 +10,7 @@ public class EndFlag : MonoBehaviour
         if (collision.CompareTag("Player") && (PlayerInventory.Instance.IsInInventory("REDGEM")))
         {
             PlayerInventory.Instance.RemoveItemFromInventory("REDGEM");
+            SceneManager.LoadScene(1);
         }
     }
 }
