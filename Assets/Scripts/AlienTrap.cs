@@ -28,7 +28,7 @@ public class AlienTrap : MonoBehaviour
 
     private void BridgeFall()
     {
-        animAlien.SetTrigger("Bridge");
+        animBridge.SetTrigger("Bridge");
     }
 
     private void AlienThief()
