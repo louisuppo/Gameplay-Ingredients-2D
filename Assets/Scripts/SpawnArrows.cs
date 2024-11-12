@@ -19,10 +19,10 @@ public class SpawnArrows : MonoBehaviour
 
     void Start()
     {
-        Invoke("SpawnRight", 1f);
-        Invoke("SpawnUp", 2f);
-        Invoke("SpawnDown", 3f);
-        Invoke("SpawnLeft", 4f);
+        InvokeRepeating("SpawnRight", 1f,10f);
+        InvokeRepeating("SpawnUp", 2f, 10f);
+        InvokeRepeating("SpawnDown", 3f, 10f);
+        InvokeRepeating("SpawnLeft", 4f , 10f);
     }
 
     private void SpawnRight()
@@ -35,19 +35,19 @@ public class SpawnArrows : MonoBehaviour
     private void SpawnUp()
     {
         GameObject ArrowUp = Instantiate(arrowUp, spawnArrowUp.position, spawnArrowUp.rotation);
-        Rigidbody2D ArrowUpRB = arrowUp.GetComponent<Rigidbody2D>();
+        Rigidbody2D ArrowUpRB = ArrowUp.GetComponent<Rigidbody2D>();
         ArrowUpRB.velocity = spawnArrowUp.up * -speedArrows;
     }
     private void SpawnDown()
     {
         GameObject ArrowDown = Instantiate(arrowDown, spawnArrowDown.position, spawnArrowDown.rotation);
-        Rigidbody2D ArrowDownRB = arrowDown.GetComponent<Rigidbody2D>();
+        Rigidbody2D ArrowDownRB = ArrowDown.GetComponent<Rigidbody2D>();
         ArrowDownRB.velocity = spawnArrowDown.up * -speedArrows;
     }
     private void SpawnLeft()
     {
         GameObject ArrowLeft = Instantiate(arrowLeft, spawnArrowLeft.position, spawnArrowLeft.rotation);
-        Rigidbody2D ArrowLeftRB = arrowLeft.GetComponent<Rigidbody2D>();
+        Rigidbody2D ArrowLeftRB = ArrowLeft.GetComponent<Rigidbody2D>();
         ArrowLeftRB.velocity = spawnArrowLeft.up * -speedArrows;
     }
 }
