@@ -16,13 +16,23 @@ public class SpawnArrows : MonoBehaviour
 
     [SerializeField] private float speedArrows;
 
+    public static SpawnArrows Instance;
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-        InvokeRepeating("SpawnRight", 1f,10f);
+
+    }
+
+    public void startArrows()
+    {
+        InvokeRepeating("SpawnRight", 1f, 10f);
         InvokeRepeating("SpawnUp", 2f, 10f);
         InvokeRepeating("SpawnDown", 3f, 10f);
-        InvokeRepeating("SpawnLeft", 4f , 10f);
+        InvokeRepeating("SpawnLeft", 4f, 10f);
     }
 
     private void SpawnRight()
