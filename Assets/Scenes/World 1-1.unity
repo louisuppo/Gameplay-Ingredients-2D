@@ -9486,10 +9486,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2022701982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548d5cabc4f2a5b40825f0257a013465, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ea4f2c8cbdefae4fa20007fe74eb759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: 1
+  needGem: 1
 --- !u!1 &2114033955
 GameObject:
   m_ObjectHideFlags: 0

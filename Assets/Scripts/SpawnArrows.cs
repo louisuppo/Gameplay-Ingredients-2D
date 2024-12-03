@@ -29,18 +29,18 @@ public class SpawnArrows : MonoBehaviour
 
     public void startArrows()
     {
-        InvokeRepeating("SpawnRight", 1f, 10f);
-        InvokeRepeating("SpawnUp", 2f, 10f);
-        InvokeRepeating("SpawnDown", 3f, 10f);
-        InvokeRepeating("SpawnLeft", 4f, 10f);
+        Debug.Log("sdfjisdijfsdjfsd");
+        InvokeRepeating("SpawnRight", 1f, 5f);
+        InvokeRepeating("SpawnUp", 2f, 5f);
+        InvokeRepeating("SpawnDown", 3f, 5f);
+        InvokeRepeating("SpawnLeft", 4f, 5f);
     }
 
     private void SpawnRight()
     {
         GameObject ArrowRight = Instantiate(arrowRight, spawnArrowRight.position, spawnArrowRight.rotation);
         Rigidbody2D ArrowRightRB = ArrowRight.GetComponent<Rigidbody2D>();
-        ArrowRightRB.velocity = spawnArrowRight.up * -speedArrows;
-    }
+        ArrowRightRB.velocity = spawnArrowRight.up * -speedArrows;    }
 
     private void SpawnUp()
     {
