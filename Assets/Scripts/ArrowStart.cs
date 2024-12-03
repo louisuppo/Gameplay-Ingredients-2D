@@ -24,13 +24,12 @@ public class ArrowStart : MonoBehaviour
         if (DetectArrows.score == 8)
         {
             restartMouv(collision.gameObject);
-        }            //temps de tout le puzzle
+        }            
 
     }
 
     void restartMouv (GameObject collision)
     {
-        inPuzzel = true;
         key.SetActive(true);
         laserbem.SetActive(true);
         PlayerMovement playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
